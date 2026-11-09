@@ -29,6 +29,7 @@
     --ease:          cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+
   *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
   [hidden]{ display:none !important; }
 
@@ -111,7 +112,7 @@
   .status-dot.closed{ background: var(--danger); box-shadow: 0 0 8px rgba(229,72,77,.5); }
 
   .hours-wrap{ position:relative; margin-top:8px; }
-
+  /* ---------- BOTÃO DE HORÁRIOS ANIMADO ---------- */
   .hours-toggle{
     display: inline-flex;
     align-items: center;
@@ -130,21 +131,25 @@
     margin-top: 4px;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  
   .hours-toggle:hover {
     color: var(--text);
     border-color: var(--accent-dim);
     background: var(--surface-2);
     transform: translateY(-1px);
   }
+
   .hours-toggle svg{
     width: 10px;
     height: 10px;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  
   .hours-toggle[aria-expanded="true"] {
     border-color: var(--accent-dim);
     background: var(--surface-2);
   }
+  
   .hours-toggle[aria-expanded="true"] svg {
     transform: rotate(180deg);
   }
